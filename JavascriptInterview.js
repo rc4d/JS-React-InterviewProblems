@@ -6,7 +6,8 @@ function expandArray(arr) {
     for (let i = 0; i < arr.length; i++) {
         let element = arr[i];
         if (Array.isArray(element)) {
-            expandedArr = expandedArr.concat(expandArray(element));
+            // expandedArr = expandedArr.concat(expandArray(element));
+            expandedArr = [...expandedArr, ...expandArray(element)];
         } else {
             expandedArr.push(element);
         }
@@ -60,3 +61,16 @@ Output should be
 ]
 
 */
+
+arrObj.sort(function(a, b) {
+    let nameA = a.name || '';
+    let nameB = b.name || '';
+    return nameA.localeCompare(nameB);
+});
+
+console.log(arrObj);
+
+/**
+ * Prototype in Javascript
+ * Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+ *  */ 
