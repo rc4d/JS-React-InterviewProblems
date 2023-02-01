@@ -74,3 +74,37 @@ console.log(arrObj);
  * Prototype in Javascript
  * Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
  *  */ 
+
+/**
+ * Folder Structure of React App
+ * Read code https://github.com/covid19india/covid19india-react
+ */
+/**
+ * https://codesandbox.io/s/cool-sky-ymebn8?file=/src/DigitalClock.js
+ * Create a DigitalClock Component
+ * 
+ const DigitalClock = () => {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+  useEffect(() => {
+    const interval = setInterval(
+      () => setTime(new Date().toLocaleTimeString()),
+      1000
+    );
+
+    return () => clearInterval(interval);
+  }, [time]);
+
+  return <div className="digital-clock">{time}</div>;
+};
+
+export default DigitalClock;
+ * 
+ */
+
+/**
+ * Ways to traverse object
+for(let {key, value} of obj){
+    console.log(key, value);
+}
+ */
