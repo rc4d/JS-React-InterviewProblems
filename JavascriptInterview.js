@@ -108,3 +108,38 @@ for(let {key, value} of obj){
     console.log(key, value);
 }
  */
+/**
+ * How to set cookie
+ * In this example, a function setCookie is defined, which takes three parameters: cname (cookie name), cvalue (cookie value), and exdays (number of days until the cookie expires). The function uses the JavaScript Date object to calculate the expiration date and time, which is then stored as a string in the expires variable. The cookie is then set by adding it to the document.cookie property, along with the expires information and a path of "/".
+ */
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+  // setCookie("username", "John Doe", 365);
+  
+  sampleObj = [
+ 
+    {
+     name: 'xyz',
+     city: 'hyd',
+        
+     },
+      {
+     name: 'abc',
+     city: 'Mexico',
+        }
+  ];
+  
+//   code to return all the object with name:'xyz'
+/*
+let filteredObj = sampleObj.filter(function(obj) {
+    return obj.name === 'xyz';
+  });
+  Or using arrow function:
+  let filteredObj = sampleObj.filter(obj => obj.name === 'xyz');
+
+  */
