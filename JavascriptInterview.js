@@ -43,7 +43,7 @@ y = {name:"Ronny"},
 z = {name:"John"};
 x[y] = {name:"Vivek"};
 x[z] = {name:"Akki"};
-console.log(x[y]);
+console.log(x[y]); //{ name: 'Akki' }
 
 
 // Sort by object key
@@ -143,3 +143,8 @@ let filteredObj = sampleObj.filter(function(obj) {
   let filteredObj = sampleObj.filter(obj => obj.name === 'xyz');
 
   */
+
+/** Flux In React
+ * Flux is a pattern for managing how data flows through a React application.
+ *  */   
+
